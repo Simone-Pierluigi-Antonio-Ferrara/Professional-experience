@@ -3,215 +3,223 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simone Pierluigi Antonio Ferrara — CV</title>
+  <title>Curriculum — Simone Pierluigi Antonio Ferrara</title>
 
   <style>
-    /* Reset básico */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html,body { font-family: Inter, Arial, Helvetica, sans-serif; background:#f4f6f8; color:#12202b; }
-    a { color: inherit; text-decoration: none; }
+    body { font-family: Arial, sans-serif; background:#f4f6f8; color:#12202b; }
 
-    /* Contenedor */
-    .container { max-width: 900px; margin:32px auto; background: #fff; border-radius:10px; box-shadow: 0 8px 24px rgba(18,32,43,0.08); overflow:hidden; display:grid; grid-template-columns: 1fr 2fr; }
+    .container {
+      max-width: 1000px;
+      margin:32px auto;
+      background: #fff;
+      border-radius:10px;
+      box-shadow: 0 8px 24px rgba(18,32,43,0.08);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 1fr 2fr;
+    }
 
-    /* Barra lateral (izquierda) */
     .sidebar {
       background: linear-gradient(180deg,#0f1720 0%, #12202b 100%);
       color: #eef6fb;
       padding: 28px;
-      min-height: 100%;
     }
+
     .photo {
-      width:110px;height:110px;border-radius:12px;background:#cbd5e1;margin-bottom:18px;
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:#12202b;
+      width:110px;
+      height:110px;
+      border-radius:12px;
+      background:#cbd5e1;
+      margin-bottom:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#12202b;
     }
+
     .name { font-size:20px;font-weight:700;margin-bottom:6px; }
-    .meta { font-size:13px; opacity:0.9; margin-bottom:18px; }
-    .contact, .skills, .licenses, .hobbies { margin-bottom:18px; }
-    .section-title { font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; margin:12px 0; opacity:0.9; }
+    .section-title {
+      font-weight:700;
+      font-size:12px;
+      margin:12px 0;
+      text-transform:uppercase;
+    }
 
-    .contact p, .lang p, .skills p, .licenses p { font-size:13px; margin:6px 0; line-height:1.3; color:#eef6fb; opacity:0.95; }
-    .contact a { color:#cfeafe; word-break:break-all; }
+    .sidebar p { font-size:14px; margin-bottom:8px; line-height:1.3; }
 
-    .progress { background: rgba(255,255,255,0.08); border-radius:6px; height:8px; position:relative; margin-top:6px; overflow:hidden; }
-    .progress > span { display:block; height:100%; background:linear-gradient(90deg,#7dd3fc,#06b6d4); border-radius:6px; }
-
-    /* Contenido principal (derecha) */
     .main { padding: 28px 30px; }
-    .headline { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
-    .headline h1 { font-size:20px; margin-bottom:6px; }
-    .headline .small { font-size:13px; color:#475569; }
+    .main h1 { font-size:22px; margin-bottom:10px; }
+    .main h2 { margin-top:20px; margin-bottom:8px; font-size:16px; text-transform:uppercase; }
 
-    .about { margin-top:12px; margin-bottom:18px; color:#0f1720; line-height:1.45; }
-    .block { margin-bottom:18px; }
-    .job { padding:12px;border-left:4px solid #e2e8f0; margin-bottom:12px;background:#fbfdff;border-radius:8px; }
-    .job h4 { font-size:15px; margin-bottom:6px; }
-    .job .meta { font-size:13px;color:#475569;margin-bottom:8px; }
-    .job p { font-size:14px; color:#0f1720; line-height:1.4; }
+    .job, .edu-item, .cert-item {
+      background:#f9fafb;
+      border-radius:8px;
+      padding:12px;
+      margin-bottom:12px;
+      border-left:4px solid #d4dce4;
+    }
 
-    .edu-item, .cert-item { padding:10px 12px; background:#fff; border:1px solid #eef2f7; border-radius:8px; margin-bottom:10px; }
-    .lang-list { display:flex; flex-wrap:wrap; gap:8px; }
-    .lang-item { background:#f1f5f9; padding:8px 10px; border-radius:8px; font-size:13px; color:#0f1720; }
+    ul { margin-left:20px; margin-top:10px; line-height:1.4; }
 
-    footer { text-align:right; font-size:12px; color:#94a3b8; margin-top:8px; }
+    /* BOTÓN SEMICIRCULAR */
+    .download-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
 
-    /* Responsive */
+    .download-button {
+        display: inline-block;
+        padding: 14px 34px;
+        background: #0f172a;
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        border-radius: 80px 80px 0 0;
+        text-decoration: none;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.18);
+        border: 2px solid #1e293b;
+        transition: 0.25s ease;
+    }
+    .download-button:hover {
+        background:#1e293b;
+        transform: translateY(-2px);
+    }
+
     @media (max-width:820px){
-      .container { grid-template-columns: 1fr; padding:0 12px; }
+      .container { grid-template-columns: 1fr; }
       .sidebar { order:2; }
       .main { order:1; }
-      footer { text-align:left; }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container" role="main" aria-label="Curriculum Vitae Simone Ferrara">
-    <!-- SIDEBAR -->
-    <aside class="sidebar" aria-labelledby="profile-name">
+<!-- BOTÓN DE DESCARGA -->
+<div class="download-container">
+    <a class="download-button"
+       href="https://github.com/Simone-Pierluigi-Antonio-Ferrara/Professional-experience/raw/8db463b005cb0232709c99c705ec9392e7e66bab/CV%20Simone%20DE.pdf"
+       download="CV-Simone-PNG">
+       PNG Download
+    </a>
+</div>
+
+<!-- CURRICULUM -->
+<div class="container">
+
+  <aside class="sidebar">
       <div style="display:flex;align-items:center;gap:12px;">
-        <div class="photo" aria-hidden="true">SF</div>
+        <div class="photo">SF</div>
         <div>
-          <div id="profile-name" class="name">Simone Pierluigi Antonio Ferrara</div>
-          <div class="meta">Geburtsdatum: 03/05/1996 · Staatsangehörigkeit: Italienisch</div>
+          <div class="name">Simone Pierluigi Antonio Ferrara</div>
+          <p>Geburtsdatum: 03/05/1996<br>Staatsangehörigkeit: Italienisch</p>
         </div>
       </div>
 
-      <div class="contact">
+      <div>
         <div class="section-title">Kontakt</div>
         <p>Tel: (+39) 349 324 7603</p>
-        <p>Email: <a href="mailto:ferrara.simo96@gmail.com">ferrara.simo96@gmail.com</a></p>
-        <p>Wohnsitz: Contrada Fiorentino 414, 93013 Mazzarino (CL), Italien</p>
+        <p>Email: ferrara.simo96@gmail.com</p>
+        <p>Adresse: Mazzarino (CL), Italien</p>
         <p>ID: CA53804TJ</p>
       </div>
 
-      <div class="skills">
-        <div class="section-title">Kompetenzen & Digital</div>
-        <p>Microsoft Office, Google Drive, Bildbearbeitung (Photoshop, Lightroom), Drone (PATENTE A1 A2 A3), Fotografie, Editing</p>
-        <div style="margin-top:8px;">
-          <div class="section-title">Digitale Skills (Self-assessment)</div>
-          <p>Informationskompetenz: Niveau 6/6</p>
-          <p>Erstellung digitaler Inhalte: Niveau 6/6</p>
-          <p>Problemlösung: Niveau 6/6</p>
-        </div>
-      </div>
-
-      <div class="licenses">
+      <div>
         <div class="section-title">Führerscheine</div>
-        <p>AM, A, B, D, KB (KB gültig 06/02/2023 – 26/01/2028)</p>
-        <p>Iscrizione al ruolo (NCC) — Fahrerregister Handelskammer Caltanissetta</p>
+        <p>AM, A, B, D, KB</p>
+        <p>Iscrizione al ruolo (NCC)</p>
       </div>
 
-      <div class="section-title">Sprachen</div>
-      <div class="lang">
-        <div class="lang-list" aria-hidden="false">
-          <div class="lang-item"><strong>Italienisch</strong> (Muttersprache)</div>
-          <div class="lang-item"><strong>Englisch</strong> — Hören C1 · Lesen B2 · Schreiben B1</div>
-          <div class="lang-item"><strong>Spanisch</strong> — Hören C1 · Lesen B2 · Schreiben B1</div>
-          <div class="lang-item"><strong>Französisch</strong> — Hören B1 · Lesen B1 · Schreiben B1</div>
-          <div class="lang-item"><strong>Deutsch</strong> — A1 (Hören/Lesen/Schreiben)</div>
-        </div>
+      <div>
+        <div class="section-title">Digitale Fähigkeiten</div>
+        <p>Microsoft Office, Photoshop, Lightroom, Drohne A1–A3</p>
       </div>
 
-      <div class="hobbies">
-        <div class="section-title">Hobbys & Interessen</div>
-        <p>Fotografie · Sport · Musik · Kunst · Technologie · Luftfahrt · Reisen · Motorsport · Kochen · Lesen</p>
+      <div>
+        <div class="section-title">Sprachen</div>
+        <p>Italienisch (Muttersprache)</p>
+        <p>Englisch — C1</p>
+        <p>Spanisch — C1</p>
+        <p>Französisch — B1</p>
+        <p>Deutsch — A1</p>
       </div>
 
-    </aside>
+      <div>
+        <div class="section-title">Hobbys</div>
+        <p>Fotografie · Sport · Reisen · Technologie · Musik</p>
+      </div>
+  </aside>
 
-    <!-- MAIN CONTENT -->
-    <section class="main" aria-labelledby="cv-title">
-      <div class="headline">
-        <div>
-          <h1 id="cv-title">Europass — Curriculum Vitae</h1>
-          <div class="small">Berufserfahrung als Fahrer / Chauffeur · Bürokaufmann · Microstock Fotograf</div>
-        </div>
-        <div class="small">Stand: 2025</div>
+  <section class="main">
+      <h1>Europass – Curriculum Vitae</h1>
+
+      <p style="line-height:1.5;">
+        Berufserfahrung als Fahrer im Mietwagenverkehr (NCC), Erfahrung mit Vans und repräsentativen Fahrzeugen.
+        Zuverlässig, verantwortungsvoll und organisiert. Eingetragen bei der Handelskammer Caltanissetta.
+      </p>
+
+      <h2>Berufserfahrung</h2>
+
+      <div class="job">
+        <strong>Fahrer im Mietwagenverkehr (NCC)</strong>
+        <p>Agenzia Barresi Viaggi — 09/2022 – 06/2024</p>
+        <p>Kundenfahrten, Transfers, professionelle Betreuung.</p>
       </div>
 
-      <div class="about block">
-        <div class="section-title">Über mich</div>
-        <p class="about">
-          Berufserfahrung als Fahrer im Mietwagenverkehr (NCC). Geübter Umgang mit repräsentativen Fahrzeugen,
-          Vans und 9-Sitzer-Kleinbussen. Pünktlichkeit, Zuverlässigkeit, guter Kundenumgang und Belastbarkeit.
-          Eingetragen im Fahrerregister bei der Handelskammer von Caltanissetta.
-        </p>
+      <div class="job">
+        <strong>Elektrikerhelfer</strong>
+        <p>Barresi Viaggi — 09/2018 – 07/2019</p>
+        <p>Unterstützung bei Installationen.</p>
       </div>
 
-      <div class="block">
-        <div class="section-title">Berufserfahrung</div>
-
-        <div class="job" aria-label="Fahrer im Mietwagenverkehr">
-          <h4>Fahrer im Mietwagenverkehr / Chauffeur</h4>
-          <div class="meta">Agenzia Barresi Viaggi — Mazzarino (CL), Italien · 09/2022 – 06/2024</div>
-          <p>Regelmäßige Einsätze als NCC-Fahrer; sicherer Umgang mit Kundenfahrten; Organisation und pünktliche Durchführung von Transfers.</p>
-        </div>
-
-        <div class="job" aria-label="Elektrikerhelfer">
-          <h4>Elektrikerhelfer</h4>
-          <div class="meta">Barresi Viaggi — Mazzarino (CL), Italien · 09/2018 – 07/2019</div>
-          <p>Unterstützungsarbeiten bei elektrischen Installationen und Wartungen.</p>
-        </div>
-
-        <div class="job" aria-label="Babysitter">
-          <h4>Babysitter</h4>
-          <div class="meta">Mazzarino (CL), Italien · Datum nicht spezifiziert</div>
-          <p>Betreuung von Kindern, Zuverlässigkeit und verantwortungsvolles Handeln.</p>
-        </div>
-
-        <div class="job" aria-label="Microstock">
-          <h4>Mitarbeiter diverser Microstock-Fotoagenturen</h4>
-          <div class="meta">seit 2018 – aktuell</div>
-          <p>Produktion und Verkauf von Stock-Fotografien (Shutterstock, etc.). Portfolio-Link vorhanden.</p>
-        </div>
+      <div class="job">
+        <strong>Babysitter</strong>
+        <p>Mazzarino — Datum nicht spezifiziert</p>
       </div>
 
-      <div class="block">
-        <div class="section-title">Ausbildung</div>
-
-        <div class="edu-item">
-          <strong>Diploma di Amministrazione, Finanza e Marketing</strong><br>
-          ITET Rapisardi - Da Vinci — Caltanissetta · 09/2022 – 06/2025 · Abschlussnote: 100/100 · EQR Niveau 4
-        </div>
-
-        <div class="edu-item">
-          <strong>Student — Liceo Scientifico Aeronautico A. Locatelli</strong><br>
-          09/2010 – 04/2012 · Bergamo, Italien
-        </div>
-
+      <div class="job">
+        <strong>Microstock Fotograf</strong>
+        <p>Shutterstock & andere — seit 2018</p>
+        <p>Fotoproduktion, Bearbeitung und Verkauf.</p>
       </div>
 
-      <div class="block">
-        <div class="section-title">Zertifizierungen</div>
-        <div class="cert-item">
-          <strong>Fondamenti di Marketing Digitale</strong><br>
-          Google Digital Training · 15/03/2022 (Online)
-        </div>
+      <h2>Ausbildung</h2>
+
+      <div class="edu-item">
+        <strong>Diploma AFM</strong>
+        <p>ITET Rapisardi - Da Vinci — Abschlussnote 100/100</p>
       </div>
 
-      <div class="block">
-        <div class="section-title">Kompetenzen & Kenntnisse (kurz)</div>
-        <ul style="margin-top:8px; margin-left:18px; line-height:1.5; color:#0f1720;">
-          <li>Gute PC-Kenntnisse (Office, Google Suite, PDF-Management, E-Mail)</li>
-          <li>Bildbearbeitung: Adobe Photoshop, Lightroom</li>
-          <li>Fotografie & Post-Produktion; Drohnenbetrieb (PATENTE A1 A2 A3)</li>
-          <li>Führerscheine: AM, A, B, D, KB — Erfahrung mit Fahrzeugen mit Automatikgetriebe</li>
-          <li>Organisation, Pünktlichkeit, Stressresistenz, Teamarbeit sowie eigenständiges Arbeiten</li>
-        </ul>
+      <div class="edu-item">
+        <strong>Liceo Scientifico Aeronautico</strong>
+        <p>2010 – 2012 — Bergamo</p>
       </div>
 
-      <div class="block">
-        <div class="section-title">Links</div>
-        <p><a href="https://www.shutterstock.com/g/Simoncountry" target="_blank" rel="noopener">Portfolio / Shutterstock</a></p>
-        <p><a href="https://www.rapisardidavinci.edu.it/" target="_blank" rel="noopener">ITET Rapisardi - Da Vinci (Schule)</a></p>
+      <h2>Zertifizierungen</h2>
+
+      <div class="cert-item">
+        <strong>Fondamenti di Marketing Digitale</strong>
+        <p>Google Digital Training — 2022</p>
       </div>
 
-      <footer>
-        Informationen basieren auf dem übermittelten Dokument. Quelle: CV Simone DE. 1
-      </footer>
-    </section>
-  </div>
+      <h2>Kompetenzen</h2>
+      <ul>
+        <li>Erfahrung mit Automatikfahrzeugen</li>
+        <li>Adobe Photoshop & Lightroom</li>
+        <li>Drohnen A1/A2/A3</li>
+        <li>Organisation & Kundenumgang</li>
+      </ul>
+
+      <h2>Links</h2>
+      <p><a href="https://www.shutterstock.com/g/Simoncountry" target="_blank">Shutterstock Portfolio</a></p>
+
+  </section>
+
+</div>
 
 </body>
 </html>
